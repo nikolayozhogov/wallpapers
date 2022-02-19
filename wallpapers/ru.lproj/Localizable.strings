@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  wallpapers
+
+  Created by Николай on 27.12.2021.
+  
+*/
+
+"Server error" = "Ошибка сервера!";
+"Download error" = "Загрузка не удалась";
+"Close" = "Закрыть";
+"Save error" = "Ошибка при сохранении";
+"Close" = "Закрыть";
+"Picture is saved!" = "Изображение сохранено";
+"Ok" = "Хорошо";

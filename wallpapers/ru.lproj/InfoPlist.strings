@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  wallpapers
+
+  Created by Николай on 09.01.2022.
+  
+*/
+
+NSPhotoLibraryAddUsageDescription = "Запрос на сохранение изображений в Фото, это необходимо сделать, что бы иметь возможность установить это изображение как обои";
+CFBundleDisplayName = "Обои";

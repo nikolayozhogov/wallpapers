@@ -1,0 +1,9 @@
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "FK1-4G-SlG"; */
+"FK1-4G-SlG.title" = "Item";
+
+/* Class = "UILabel"; text = "Выберите категории"; ObjectID = "WMN-AZ-bJ4"; */
+"WMN-AZ-bJ4.text" = "Select categories";
+
+/* Class = "UIBarButtonItem"; title = "Сохранить"; ObjectID = "rCx-cE-iBB"; */
+"rCx-cE-iBB.title" = "Save";

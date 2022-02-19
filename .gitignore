@@ -1,0 +1,7 @@
+Pods/
+.DS_Store
+.Trashes
+build/
+*.pbxuser
+xcuserdata/
+Podfile.lock

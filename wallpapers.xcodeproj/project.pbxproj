@@ -1,0 +1,983 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1503F1223978F6AF82A2F691 /* Pods_wallpapers_wallpapersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF461B7D77A4EFB954C790BC /* Pods_wallpapers_wallpapersUITests.framework */; };
+		2C792085CE80F7B182DC4726 /* Pods_wallpapers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F04324AC23FF088F0C4FDF /* Pods_wallpapers.framework */; };
+		35D96E003FB325ABEB65D86F /* Pods_wallpapersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BFC87AC4730A9FB123AAAE /* Pods_wallpapersTests.framework */; };
+		9501024B27ABB10100531FC1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501024A27ABB10100531FC1 /* Config.swift */; };
+		9510770227BFA6440041D0FC /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510770127BFA6440041D0FC /* Tag.swift */; };
+		9510770527BFAD750041D0FC /* LabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510770327BFAD750041D0FC /* LabelViewCell.swift */; };
+		9510770627BFAD750041D0FC /* LabelViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9510770427BFAD750041D0FC /* LabelViewCell.xib */; };
+		951319D027B7F2F80062FDAA /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 951319CF27B7F2F80062FDAA /* Configuration.storekit */; };
+		951319D227B7FF360062FDAA /* FavoriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951319D127B7FF360062FDAA /* FavoriteController.swift */; };
+		952314EB27AC40810040AB8A /* MainViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952314EA27AC40810040AB8A /* MainViewControllerDelegate.swift */; };
+		952314EE27AC43510040AB8A /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952314EC27AC43510040AB8A /* TagViewCell.swift */; };
+		952314EF27AC43510040AB8A /* TagViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952314ED27AC43510040AB8A /* TagViewCell.xib */; };
+		954A4CB3276F2FE6002F1AEF /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A4CB1276F2FE6002F1AEF /* CategoryViewCell.swift */; };
+		954A4CB4276F2FE6002F1AEF /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954A4CB2276F2FE6002F1AEF /* CategoryViewCell.xib */; };
+		954A4CB6276F5B30002F1AEF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A4CB5276F5B30002F1AEF /* Storage.swift */; };
+		954F41E927A3CBC5007E6E39 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954F41E827A3CBC5007E6E39 /* SettingsController.swift */; };
+		956B29B02765FB580044484B /* Wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B29AF2765FB580044484B /* Wallpaper.swift */; };
+		956B29B22765FB600044484B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B29B12765FB600044484B /* Category.swift */; };
+		956B29B52765FD220044484B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B29B42765FD220044484B /* MainController.swift */; };
+		956B29B7276603A10044484B /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B29B6276603A10044484B /* CategoryController.swift */; };
+		958E1C26278B5E3600C1C077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 958E1C28278B5E3600C1C077 /* InfoPlist.strings */; };
+		958F8A9127AD911B009D71BA /* Purchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F8A9027AD911B009D71BA /* Purchases.swift */; };
+		95A936482779D84B00E98EF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A9364A2779D84B00E98EF6 /* Localizable.strings */; };
+		95B2F6ED2765CE8000660F49 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2F6EC2765CE8000660F49 /* UIColor.swift */; };
+		95B2F6F02765CEA000660F49 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2F6EF2765CEA000660F49 /* Image.swift */; };
+		95B2F6F22765CEB100660F49 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2F6F12765CEB100660F49 /* Backend.swift */; };
+		95EB8EFA27625A06000AEC68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EB8EF927625A06000AEC68 /* AppDelegate.swift */; };
+		95EB8EFC27625A06000AEC68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EB8EFB27625A06000AEC68 /* SceneDelegate.swift */; };
+		95EB8F0127625A06000AEC68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EB8EFF27625A06000AEC68 /* Main.storyboard */; };
+		95EB8F0427625A06000AEC68 /* wallpapers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95EB8F0227625A06000AEC68 /* wallpapers.xcdatamodeld */; };
+		95EB8F0627625A07000AEC68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EB8F0527625A07000AEC68 /* Assets.xcassets */; };
+		95EB8F0927625A07000AEC68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EB8F0727625A07000AEC68 /* LaunchScreen.storyboard */; };
+		95EB8F1427625A08000AEC68 /* wallpapersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EB8F1327625A08000AEC68 /* wallpapersTests.swift */; };
+		95EB8F1E27625A08000AEC68 /* wallpapersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EB8F1D27625A08000AEC68 /* wallpapersUITests.swift */; };
+		95EB8F2027625A08000AEC68 /* wallpapersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EB8F1F27625A08000AEC68 /* wallpapersUITestsLaunchTests.swift */; };
+		95ED5E6727B91D4A00DA00F3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED5E6627B91D4A00DA00F3 /* Settings.swift */; };
+		95F94F9227AA9B5600544657 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F94F9127AA9B5600544657 /* SearchController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95EB8F1027625A08000AEC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95EB8EEE27625A06000AEC68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95EB8EF527625A06000AEC68;
+			remoteInfo = wallpapers;
+		};
+		95EB8F1A27625A08000AEC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95EB8EEE27625A06000AEC68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95EB8EF527625A06000AEC68;
+			remoteInfo = wallpapers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		396B1BEE08CB26004B3B53E7 /* Pods-wallpapersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpapersTests.release.xcconfig"; path = "Target Support Files/Pods-wallpapersTests/Pods-wallpapersTests.release.xcconfig"; sourceTree = "<group>"; };
+		47F25A651665549A68C11165 /* Pods-wallpapersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpapersTests.debug.xcconfig"; path = "Target Support Files/Pods-wallpapersTests/Pods-wallpapersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54F04324AC23FF088F0C4FDF /* Pods_wallpapers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpapers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		581853943736A227082E3A3A /* Pods-wallpapers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpapers.debug.xcconfig"; path = "Target Support Files/Pods-wallpapers/Pods-wallpapers.debug.xcconfig"; sourceTree = "<group>"; };
+		7F306D2DC6A4C9A7D5B7D363 /* Pods-wallpapers-wallpapersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpapers-wallpapersUITests.release.xcconfig"; path = "Target Support Files/Pods-wallpapers-wallpapersUITests/Pods-wallpapers-wallpapersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9501024A27ABB10100531FC1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9510770127BFA6440041D0FC /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		9510770327BFAD750041D0FC /* LabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewCell.swift; sourceTree = "<group>"; };
+		9510770427BFAD750041D0FC /* LabelViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelViewCell.xib; sourceTree = "<group>"; };
+		951319CF27B7F2F80062FDAA /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		951319D127B7FF360062FDAA /* FavoriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteController.swift; sourceTree = "<group>"; };
+		952314EA27AC40810040AB8A /* MainViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerDelegate.swift; sourceTree = "<group>"; };
+		952314EC27AC43510040AB8A /* TagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
+		952314ED27AC43510040AB8A /* TagViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagViewCell.xib; sourceTree = "<group>"; };
+		954A4CB1276F2FE6002F1AEF /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
+		954A4CB2276F2FE6002F1AEF /* CategoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewCell.xib; sourceTree = "<group>"; };
+		954A4CB5276F5B30002F1AEF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		954F41E827A3CBC5007E6E39 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		956B29AF2765FB580044484B /* Wallpaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallpaper.swift; sourceTree = "<group>"; };
+		956B29B12765FB600044484B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		956B29B42765FD220044484B /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		956B29B6276603A10044484B /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		958E1C27278B5E3600C1C077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		958E1C29278B5E3700C1C077 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		958F8A9027AD911B009D71BA /* Purchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchases.swift; sourceTree = "<group>"; };
+		95A936442779D80100E98EF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95A936452779D80100E98EF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95A936492779D84B00E98EF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95B2F6EC2765CE8000660F49 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		95B2F6EF2765CEA000660F49 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		95B2F6F12765CEB100660F49 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		95EB8EF627625A06000AEC68 /* wallpapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallpapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95EB8EF927625A06000AEC68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95EB8EFB27625A06000AEC68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		95EB8F0327625A06000AEC68 /* wallpapers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wallpapers.xcdatamodel; sourceTree = "<group>"; };
+		95EB8F0527625A07000AEC68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95EB8F0A27625A07000AEC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EB8F0F27625A08000AEC68 /* wallpapersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wallpapersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95EB8F1327625A08000AEC68 /* wallpapersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallpapersTests.swift; sourceTree = "<group>"; };
+		95EB8F1927625A08000AEC68 /* wallpapersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wallpapersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95EB8F1D27625A08000AEC68 /* wallpapersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallpapersUITests.swift; sourceTree = "<group>"; };
+		95EB8F1F27625A08000AEC68 /* wallpapersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallpapersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		95ED5E6627B91D4A00DA00F3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		95F94F9127AA9B5600544657 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		95FDB61627A14C30001CAC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95FDB61727A14C30001CAC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C794D0CB1BF0DC5B06BAA74F /* Pods-wallpapers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpapers.release.xcconfig"; path = "Target Support Files/Pods-wallpapers/Pods-wallpapers.release.xcconfig"; sourceTree = "<group>"; };
+		C7BFC87AC4730A9FB123AAAE /* Pods_wallpapersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpapersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF461B7D77A4EFB954C790BC /* Pods_wallpapers_wallpapersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpapers_wallpapersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DABB7E63B31FDAF0B0DBE1 /* Pods-wallpapers-wallpapersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpapers-wallpapersUITests.debug.xcconfig"; path = "Target Support Files/Pods-wallpapers-wallpapersUITests/Pods-wallpapers-wallpapersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95EB8EF327625A06000AEC68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C792085CE80F7B182DC4726 /* Pods_wallpapers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EB8F0C27625A08000AEC68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D96E003FB325ABEB65D86F /* Pods_wallpapersTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EB8F1627625A08000AEC68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1503F1223978F6AF82A2F691 /* Pods_wallpapers_wallpapersUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5929187780E2DD7435394850 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54F04324AC23FF088F0C4FDF /* Pods_wallpapers.framework */,
+				CF461B7D77A4EFB954C790BC /* Pods_wallpapers_wallpapersUITests.framework */,
+				C7BFC87AC4730A9FB123AAAE /* Pods_wallpapersTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9501024727ABAAF900531FC1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				952314EA27AC40810040AB8A /* MainViewControllerDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		954A4CB0276F2FBE002F1AEF /* CustomCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				954A4CB1276F2FE6002F1AEF /* CategoryViewCell.swift */,
+				954A4CB2276F2FE6002F1AEF /* CategoryViewCell.xib */,
+				952314EC27AC43510040AB8A /* TagViewCell.swift */,
+				952314ED27AC43510040AB8A /* TagViewCell.xib */,
+				9510770327BFAD750041D0FC /* LabelViewCell.swift */,
+				9510770427BFAD750041D0FC /* LabelViewCell.xib */,
+			);
+			path = CustomCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		956B29AE2765FB4F0044484B /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				956B29AF2765FB580044484B /* Wallpaper.swift */,
+				956B29B12765FB600044484B /* Category.swift */,
+				9510770127BFA6440041D0FC /* Tag.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+		956B29B32765FD0D0044484B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				956B29B42765FD220044484B /* MainController.swift */,
+				956B29B6276603A10044484B /* CategoryController.swift */,
+				954F41E827A3CBC5007E6E39 /* SettingsController.swift */,
+				95F94F9127AA9B5600544657 /* SearchController.swift */,
+				951319D127B7FF360062FDAA /* FavoriteController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95B2F6EB2765CE7000660F49 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				95B2F6EC2765CE8000660F49 /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		95B2F6EE2765CE9300660F49 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				95B2F6EF2765CEA000660F49 /* Image.swift */,
+				954A4CB5276F5B30002F1AEF /* Storage.swift */,
+				95B2F6F12765CEB100660F49 /* Backend.swift */,
+				9501024A27ABB10100531FC1 /* Config.swift */,
+				958F8A9027AD911B009D71BA /* Purchases.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		95EB8EED27625A06000AEC68 = {
+			isa = PBXGroup;
+			children = (
+				95EB8EF827625A06000AEC68 /* wallpapers */,
+				95EB8F1227625A08000AEC68 /* wallpapersTests */,
+				95EB8F1C27625A08000AEC68 /* wallpapersUITests */,
+				95EB8EF727625A06000AEC68 /* Products */,
+				C3CFBF50920264A881BADE8E /* Pods */,
+				5929187780E2DD7435394850 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		95EB8EF727625A06000AEC68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95EB8EF627625A06000AEC68 /* wallpapers.app */,
+				95EB8F0F27625A08000AEC68 /* wallpapersTests.xctest */,
+				95EB8F1927625A08000AEC68 /* wallpapersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95EB8EF827625A06000AEC68 /* wallpapers */ = {
+			isa = PBXGroup;
+			children = (
+				95ED5E6527B91D3F00DA00F3 /* Model */,
+				9501024727ABAAF900531FC1 /* Protocol */,
+				954A4CB0276F2FBE002F1AEF /* CustomCollectionViewCell */,
+				956B29B32765FD0D0044484B /* Controller */,
+				956B29AE2765FB4F0044484B /* Struct */,
+				95B2F6EE2765CE9300660F49 /* Manager */,
+				95B2F6EB2765CE7000660F49 /* Extension */,
+				95EB8EF927625A06000AEC68 /* AppDelegate.swift */,
+				95EB8EFB27625A06000AEC68 /* SceneDelegate.swift */,
+				95EB8EFF27625A06000AEC68 /* Main.storyboard */,
+				95EB8F0527625A07000AEC68 /* Assets.xcassets */,
+				95EB8F0727625A07000AEC68 /* LaunchScreen.storyboard */,
+				95EB8F0A27625A07000AEC68 /* Info.plist */,
+				95EB8F0227625A06000AEC68 /* wallpapers.xcdatamodeld */,
+				95A9364A2779D84B00E98EF6 /* Localizable.strings */,
+				958E1C28278B5E3600C1C077 /* InfoPlist.strings */,
+				951319CF27B7F2F80062FDAA /* Configuration.storekit */,
+			);
+			path = wallpapers;
+			sourceTree = "<group>";
+		};
+		95EB8F1227625A08000AEC68 /* wallpapersTests */ = {
+			isa = PBXGroup;
+			children = (
+				95EB8F1327625A08000AEC68 /* wallpapersTests.swift */,
+			);
+			path = wallpapersTests;
+			sourceTree = "<group>";
+		};
+		95EB8F1C27625A08000AEC68 /* wallpapersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95EB8F1D27625A08000AEC68 /* wallpapersUITests.swift */,
+				95EB8F1F27625A08000AEC68 /* wallpapersUITestsLaunchTests.swift */,
+			);
+			path = wallpapersUITests;
+			sourceTree = "<group>";
+		};
+		95ED5E6527B91D3F00DA00F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95ED5E6627B91D4A00DA00F3 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3CFBF50920264A881BADE8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				581853943736A227082E3A3A /* Pods-wallpapers.debug.xcconfig */,
+				C794D0CB1BF0DC5B06BAA74F /* Pods-wallpapers.release.xcconfig */,
+				E8DABB7E63B31FDAF0B0DBE1 /* Pods-wallpapers-wallpapersUITests.debug.xcconfig */,
+				7F306D2DC6A4C9A7D5B7D363 /* Pods-wallpapers-wallpapersUITests.release.xcconfig */,
+				47F25A651665549A68C11165 /* Pods-wallpapersTests.debug.xcconfig */,
+				396B1BEE08CB26004B3B53E7 /* Pods-wallpapersTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95EB8EF527625A06000AEC68 /* wallpapers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95EB8F2327625A08000AEC68 /* Build configuration list for PBXNativeTarget "wallpapers" */;
+			buildPhases = (
+				6461996ABA03985A7C95AB76 /* [CP] Check Pods Manifest.lock */,
+				95EB8EF227625A06000AEC68 /* Sources */,
+				95EB8EF327625A06000AEC68 /* Frameworks */,
+				95EB8EF427625A06000AEC68 /* Resources */,
+				09A123CFEDCA292E8A240884 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wallpapers;
+			productName = wallpapers;
+			productReference = 95EB8EF627625A06000AEC68 /* wallpapers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95EB8F0E27625A08000AEC68 /* wallpapersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95EB8F2627625A08000AEC68 /* Build configuration list for PBXNativeTarget "wallpapersTests" */;
+			buildPhases = (
+				8FA920A188047513D4CD0989 /* [CP] Check Pods Manifest.lock */,
+				95EB8F0B27625A08000AEC68 /* Sources */,
+				95EB8F0C27625A08000AEC68 /* Frameworks */,
+				95EB8F0D27625A08000AEC68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95EB8F1127625A08000AEC68 /* PBXTargetDependency */,
+			);
+			name = wallpapersTests;
+			productName = wallpapersTests;
+			productReference = 95EB8F0F27625A08000AEC68 /* wallpapersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95EB8F1827625A08000AEC68 /* wallpapersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95EB8F2927625A08000AEC68 /* Build configuration list for PBXNativeTarget "wallpapersUITests" */;
+			buildPhases = (
+				EC0A45937E7797FD9838EA6C /* [CP] Check Pods Manifest.lock */,
+				95EB8F1527625A08000AEC68 /* Sources */,
+				95EB8F1627625A08000AEC68 /* Frameworks */,
+				95EB8F1727625A08000AEC68 /* Resources */,
+				78FBF83FE965A6B0521CA9B8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95EB8F1B27625A08000AEC68 /* PBXTargetDependency */,
+			);
+			name = wallpapersUITests;
+			productName = wallpapersUITests;
+			productReference = 95EB8F1927625A08000AEC68 /* wallpapersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95EB8EEE27625A06000AEC68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					95EB8EF527625A06000AEC68 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					95EB8F0E27625A08000AEC68 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 95EB8EF527625A06000AEC68;
+					};
+					95EB8F1827625A08000AEC68 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 95EB8EF527625A06000AEC68;
+					};
+				};
+			};
+			buildConfigurationList = 95EB8EF127625A06000AEC68 /* Build configuration list for PBXProject "wallpapers" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+				Base,
+			);
+			mainGroup = 95EB8EED27625A06000AEC68;
+			productRefGroup = 95EB8EF727625A06000AEC68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95EB8EF527625A06000AEC68 /* wallpapers */,
+				95EB8F0E27625A08000AEC68 /* wallpapersTests */,
+				95EB8F1827625A08000AEC68 /* wallpapersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95EB8EF427625A06000AEC68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A936482779D84B00E98EF6 /* Localizable.strings in Resources */,
+				951319D027B7F2F80062FDAA /* Configuration.storekit in Resources */,
+				958E1C26278B5E3600C1C077 /* InfoPlist.strings in Resources */,
+				9510770627BFAD750041D0FC /* LabelViewCell.xib in Resources */,
+				95EB8F0927625A07000AEC68 /* LaunchScreen.storyboard in Resources */,
+				95EB8F0627625A07000AEC68 /* Assets.xcassets in Resources */,
+				954A4CB4276F2FE6002F1AEF /* CategoryViewCell.xib in Resources */,
+				95EB8F0127625A06000AEC68 /* Main.storyboard in Resources */,
+				952314EF27AC43510040AB8A /* TagViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EB8F0D27625A08000AEC68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EB8F1727625A08000AEC68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09A123CFEDCA292E8A240884 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallpapers/Pods-wallpapers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallpapers/Pods-wallpapers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wallpapers/Pods-wallpapers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6461996ABA03985A7C95AB76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wallpapers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78FBF83FE965A6B0521CA9B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallpapers-wallpapersUITests/Pods-wallpapers-wallpapersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallpapers-wallpapersUITests/Pods-wallpapers-wallpapersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wallpapers-wallpapersUITests/Pods-wallpapers-wallpapersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FA920A188047513D4CD0989 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wallpapersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC0A45937E7797FD9838EA6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wallpapers-wallpapersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95EB8EF227625A06000AEC68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954A4CB3276F2FE6002F1AEF /* CategoryViewCell.swift in Sources */,
+				954F41E927A3CBC5007E6E39 /* SettingsController.swift in Sources */,
+				95B2F6F02765CEA000660F49 /* Image.swift in Sources */,
+				9510770227BFA6440041D0FC /* Tag.swift in Sources */,
+				95F94F9227AA9B5600544657 /* SearchController.swift in Sources */,
+				952314EE27AC43510040AB8A /* TagViewCell.swift in Sources */,
+				952314EB27AC40810040AB8A /* MainViewControllerDelegate.swift in Sources */,
+				956B29B7276603A10044484B /* CategoryController.swift in Sources */,
+				956B29B02765FB580044484B /* Wallpaper.swift in Sources */,
+				958F8A9127AD911B009D71BA /* Purchases.swift in Sources */,
+				95EB8EFA27625A06000AEC68 /* AppDelegate.swift in Sources */,
+				954A4CB6276F5B30002F1AEF /* Storage.swift in Sources */,
+				956B29B52765FD220044484B /* MainController.swift in Sources */,
+				95EB8F0427625A06000AEC68 /* wallpapers.xcdatamodeld in Sources */,
+				956B29B22765FB600044484B /* Category.swift in Sources */,
+				95ED5E6727B91D4A00DA00F3 /* Settings.swift in Sources */,
+				951319D227B7FF360062FDAA /* FavoriteController.swift in Sources */,
+				95EB8EFC27625A06000AEC68 /* SceneDelegate.swift in Sources */,
+				9501024B27ABB10100531FC1 /* Config.swift in Sources */,
+				9510770527BFAD750041D0FC /* LabelViewCell.swift in Sources */,
+				95B2F6F22765CEB100660F49 /* Backend.swift in Sources */,
+				95B2F6ED2765CE8000660F49 /* UIColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EB8F0B27625A08000AEC68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95EB8F1427625A08000AEC68 /* wallpapersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EB8F1527625A08000AEC68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95EB8F1E27625A08000AEC68 /* wallpapersUITests.swift in Sources */,
+				95EB8F2027625A08000AEC68 /* wallpapersUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95EB8F1127625A08000AEC68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95EB8EF527625A06000AEC68 /* wallpapers */;
+			targetProxy = 95EB8F1027625A08000AEC68 /* PBXContainerItemProxy */;
+		};
+		95EB8F1B27625A08000AEC68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95EB8EF527625A06000AEC68 /* wallpapers */;
+			targetProxy = 95EB8F1A27625A08000AEC68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		958E1C28278B5E3600C1C077 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				958E1C27278B5E3600C1C077 /* en */,
+				958E1C29278B5E3700C1C077 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		95A9364A2779D84B00E98EF6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A936492779D84B00E98EF6 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		95EB8EFF27625A06000AEC68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A936442779D80100E98EF6 /* ru */,
+				95FDB61627A14C30001CAC65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95EB8F0727625A07000AEC68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A936452779D80100E98EF6 /* ru */,
+				95FDB61727A14C30001CAC65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95EB8F2127625A08000AEC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95EB8F2227625A08000AEC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95EB8F2427625A08000AEC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 581853943736A227082E3A3A /* Pods-wallpapers.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = 23DN26549X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = wallpapers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Обои";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Запрос на сохранение изображений в Фото, это необходимо сделать, что бы иметь возможность установить это изображение как обои";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ozhogov.wallpapers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95EB8F2527625A08000AEC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C794D0CB1BF0DC5B06BAA74F /* Pods-wallpapers.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = 23DN26549X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = wallpapers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Обои";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Запрос на сохранение изображений в Фото, это необходимо сделать, что бы иметь возможность установить это изображение как обои";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ozhogov.wallpapers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		95EB8F2727625A08000AEC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F25A651665549A68C11165 /* Pods-wallpapersTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DN26549X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ozhogov.wallpapersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wallpapers.app/wallpapers";
+			};
+			name = Debug;
+		};
+		95EB8F2827625A08000AEC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 396B1BEE08CB26004B3B53E7 /* Pods-wallpapersTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DN26549X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ozhogov.wallpapersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wallpapers.app/wallpapers";
+			};
+			name = Release;
+		};
+		95EB8F2A27625A08000AEC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8DABB7E63B31FDAF0B0DBE1 /* Pods-wallpapers-wallpapersUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DN26549X;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ozhogov.wallpapersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = wallpapers;
+			};
+			name = Debug;
+		};
+		95EB8F2B27625A08000AEC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F306D2DC6A4C9A7D5B7D363 /* Pods-wallpapers-wallpapersUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DN26549X;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ozhogov.wallpapersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = wallpapers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95EB8EF127625A06000AEC68 /* Build configuration list for PBXProject "wallpapers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EB8F2127625A08000AEC68 /* Debug */,
+				95EB8F2227625A08000AEC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95EB8F2327625A08000AEC68 /* Build configuration list for PBXNativeTarget "wallpapers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EB8F2427625A08000AEC68 /* Debug */,
+				95EB8F2527625A08000AEC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95EB8F2627625A08000AEC68 /* Build configuration list for PBXNativeTarget "wallpapersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EB8F2727625A08000AEC68 /* Debug */,
+				95EB8F2827625A08000AEC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95EB8F2927625A08000AEC68 /* Build configuration list for PBXNativeTarget "wallpapersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EB8F2A27625A08000AEC68 /* Debug */,
+				95EB8F2B27625A08000AEC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95EB8F0227625A06000AEC68 /* wallpapers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95EB8F0327625A06000AEC68 /* wallpapers.xcdatamodel */,
+			);
+			currentVersion = 95EB8F0327625A06000AEC68 /* wallpapers.xcdatamodel */;
+			path = wallpapers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 95EB8EEE27625A06000AEC68 /* Project object */;
+}

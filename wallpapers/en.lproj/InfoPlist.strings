@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  wallpapers
+
+  Created by Николай on 09.01.2022.
+  
+*/
+
+NSPhotoLibraryAddUsageDescription = "Saving images to Photos, this must be done so that you can set the image as wallpaper";
+CFBundleDisplayName = "Wallpaper";
