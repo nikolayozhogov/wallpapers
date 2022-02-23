@@ -25,10 +25,9 @@ class CategoryController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        //cell_width = Int((self.collectionView.frame.size.width - 50)/2)
-        cell_width = Int(self.collectionView.frame.size.width)
+        cell_width = Int(collectionView.frame.size.width)
                         
-        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumInteritemSpacing = 4
         layout.itemSize = CGSize(width: cell_width,height: cell_height)
@@ -42,7 +41,7 @@ class CategoryController: UIViewController {
         
         print("viewDidDisappear")
         
-        self.delegate?.claimShowWallpaper()
+        delegate?.claimShowWallpaper()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,22 +58,22 @@ class CategoryController: UIViewController {
 extension CategoryController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.categories.count
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryViewCell.identifier, for: indexPath) as! CategoryViewCell
-        let index = self.categories[indexPath.row].id
+        let index = categories[indexPath.row].id
         
-        var name = self.categories[indexPath.row].name; //ru
+        var name = categories[indexPath.row].name; //ru
         if(Config.getCurrentLanguageCode() != "ru") {
-            name = self.categories[indexPath.row].name_en
+            name = categories[indexPath.row].name_en
         }
                 
         cell.configure(index: index,
                         name: name,
-                       is_on: Storage.switch_state[index])
+                       isOn: Storage.switch_state[index])
     
         return cell
     }

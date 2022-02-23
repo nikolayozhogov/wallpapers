@@ -25,13 +25,9 @@ class CategoryViewCell: UICollectionViewCell {
         print("set \(index) value \(sender.isOn)")
     }
     
-    public func configure(index: Int, name: String, is_on: Bool) {
+    public func configure(index: Int, name: String, isOn: Bool) {
         labelName.text = name
-        radioEnable.setOn(is_on, animated: false)
-        
-        if(is_on) {
-            print("configure \(index) value \(is_on)")
-        }
+        radioEnable.setOn(isOn, animated: false)
         
         radioEnable.restorationIdentifier = String(index);
     }

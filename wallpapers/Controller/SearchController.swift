@@ -10,13 +10,12 @@ import UIKit
 class SearchController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var inputSearch: UITextField!
     
     private var tags: [Tag] = []
     
-    private var productCellWidth: Int = 0
-        private var productCellHeight: Int = 0
+    private var cellWidth: Int = 0
+    private var cellHeight: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +26,13 @@ class SearchController: UIViewController {
     
     private func setUI() {
         
-        productCellWidth = Int(self.collectionView.frame.size.width)
-        productCellHeight = Config.product2CellHeight
+        cellWidth = Int(collectionView.frame.size.width)
+        cellHeight = Config.searchCellHeight
     
-        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumInteritemSpacing = 4
-        layout.itemSize = CGSize(width: productCellWidth, height: productCellHeight)
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         
         collectionView.collectionViewLayout = layout
         collectionView.register(TagViewCell.nib(), forCellWithReuseIdentifier: TagViewCell.identifier)
@@ -42,21 +41,22 @@ class SearchController: UIViewController {
     @IBAction func searchEditing(_ sender: Any) {
         
         var q = inputSearch.text ?? ""
-        
+        /*
         let cond = ProductCond(section_id: self.section.id, for_index: 0, sklad: 0)
-                BackendProduct.getList(cond: cond) { products in
-                
-                    //print(products)
-                    self.products = products
-                    
-                    //Страница на стадии заполнения
-                    if(self.products.isEmpty) {
-                        self.productCellWidth = Int(self.productCollectionView.frame.size.width)
-                        self.products.insert(Product(), at: 0)
-                    }
-                    
-                    self.productCollectionView.reloadData()
-                }
+        BackendProduct.getList(cond: cond) { products in
+        
+            //print(products)
+            self.products = products
+            
+            //Страница на стадии заполнения
+            if(self.products.isEmpty) {
+                self.productCellWidth = Int(self.productCollectionView.frame.size.width)
+                self.products.insert(Product(), at: 0)
+            }
+            
+            self.productCollectionView.reloadData()
+        }
+         */
     }
     
 }
@@ -81,7 +81,7 @@ extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource
         if(tags[indexPath.row].id > 0) {
                 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagViewCell.identifier, for: indexPath) as! TagViewCell
-            cell.configure(tag: self.tags[indexPath.row])
+            cell.configure(tag: tags[indexPath.row])
             return cell
                     
         } else {
@@ -92,7 +92,7 @@ extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: productCellWidth, height: productCellHeight)
+            return CGSize(width: cellWidth, height: cellHeight)
         }
     
 }

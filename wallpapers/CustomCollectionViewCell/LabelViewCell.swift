@@ -9,9 +9,18 @@ import UIKit
 
 class LabelViewCell: UICollectionViewCell {
 
+    static var identifier = "LabelViewCell"
+    @IBOutlet weak var labelName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
+    public func configure(text: String) {
+        labelName.text = text
+    }
+    
+    public static func nib() -> UINib {
+        return UINib(nibName: self.identifier, bundle: nil)
+    }
 }

@@ -14,6 +14,8 @@ class Config {
     
     static var contentEmpty: String = "Ничего не найдено"
     
+    static var searchCellHeight: Int = 50
+    
     static func getCurrentLanguageCode() -> String {
         let langStr = Locale.current.languageCode ?? "en"
         return langStr
