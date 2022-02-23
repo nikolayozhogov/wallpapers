@@ -16,7 +16,6 @@ class MainController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var loaderView: UIView!
     
-    //private var wallpaper: Wallpaper = Wallpaper()
     private var wallpaper = Wallpaper()
     
     //Показанные обоев
@@ -35,12 +34,6 @@ class MainController: UIViewController {
         
         setUI();
         
-        for index in 0...30 {
-            Storage.switch_state.insert(false, at: index)
-        }
-
-        print("locale " + Config.getCurrentLanguageCode())
-        
         //Purchases.default.initialize()
     }
     
@@ -52,7 +45,7 @@ class MainController: UIViewController {
             
             startLoadAnimation()
             
-            Backend.wallpaper(id: id, category_id: [0], limit: 1, complete: { status, result in
+            Backend.wallpaper(id: id, category_id: Storage.getCategorySwitchedIds(), limit: 1, complete: { status, result in
 
                 if(status) {
                     

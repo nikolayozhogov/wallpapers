@@ -137,13 +137,9 @@ public class Backend {
         
         let url = Backend.url + "item.list"
         
-        //print(Storage.switch_state)
-        
         var category_ids: [String] = []
-        for (index, element) in Storage.switch_state.enumerated() {
-            if(Bool(element)) {
-                category_ids.append(String(index))
-            }
+        for element in category_id {
+            category_ids.append(String(element))
         }
         
         let parameters: Parameters = [

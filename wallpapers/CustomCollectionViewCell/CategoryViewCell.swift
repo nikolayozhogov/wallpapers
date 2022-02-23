@@ -19,17 +19,22 @@ class CategoryViewCell: UICollectionViewCell {
     }
     
     @IBAction func changeSwitch(_ sender: UISwitch) {
-        let index = Int(sender.restorationIdentifier!)!
-        Storage.switch_state[index] = sender.isOn
         
-        print("set \(index) value \(sender.isOn)")
+        let categoryId = Int(sender.restorationIdentifier!)!
+        Storage.setCategorySwitchState(categoryId: categoryId, isOn: sender.isOn)
+        print("set \(categoryId) value \(sender.isOn)")
     }
     
-    public func configure(index: Int, name: String, isOn: Bool) {
-        labelName.text = name
-        radioEnable.setOn(isOn, animated: false)
+    public func configure(category: Category) {
         
-        radioEnable.restorationIdentifier = String(index);
+        labelName.text = category.name
+        if(Config.getCurrentLanguageCode() != "ru") {
+            labelName.text = category.name_en
+        }
+        
+        radioEnable.setOn(Storage.getCategorySwitchState(categoryId: category.id), animated: false)
+        
+        radioEnable.restorationIdentifier = String(category.id);
     }
     
     public static func nib() -> UINib {

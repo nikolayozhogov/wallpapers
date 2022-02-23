@@ -64,16 +64,7 @@ extension CategoryController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryViewCell.identifier, for: indexPath) as! CategoryViewCell
-        let index = categories[indexPath.row].id
-        
-        var name = categories[indexPath.row].name; //ru
-        if(Config.getCurrentLanguageCode() != "ru") {
-            name = categories[indexPath.row].name_en
-        }
-                
-        cell.configure(index: index,
-                        name: name,
-                       isOn: Storage.switch_state[index])
+        cell.configure(category: categories[indexPath.row])
     
         return cell
     }

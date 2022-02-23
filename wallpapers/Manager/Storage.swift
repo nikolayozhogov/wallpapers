@@ -9,5 +9,28 @@ import Foundation
 
 class Storage {
     
-    static var switch_state: [Bool] = []
+    static var states: [Int: Bool] = [:]
+    
+    public static func setCategorySwitchState(categoryId: Int, isOn: Bool) {
+        states[categoryId] = isOn
+    }
+    
+    public static func getCategorySwitchState(categoryId: Int) -> Bool {
+        
+        if(states[categoryId] != nil) {
+            return states[categoryId]!
+        }
+        
+        return false
+    }
+    
+    public static func getCategorySwitchedIds() -> [Int] {
+        var switched: [Int] = []
+        for (categoryId, isOnValue) in states {
+            if(isOnValue) {
+                switched.append(categoryId)
+            }
+        }
+        return switched
+    }
 }
