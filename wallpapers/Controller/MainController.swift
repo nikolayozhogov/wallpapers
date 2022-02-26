@@ -11,30 +11,27 @@ import StoreKit
 class MainController: UIViewController {
     
     static var identifier = "MainController"
-
+    
     @IBOutlet weak var imageBackground: UIImageView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var loaderView: UIView!
     
     private var wallpaper = Wallpaper()
     
-    //Показанные обоев
+    //Показанные обои
     private var showedIds: [Int] = []
     private var stack_index: Int = 0
     
-    //Сколько обоев было показано?
-    //После первых 5 обоин будет показана реклама
+    //После первых N обоин будет показана реклама
     private var showedWallpapersCnt: Int = 0
     
     //Храним в памяти одну предыдущую обоину
     private var lastWallpaper: [Int: UIImage] = [:]
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI();
-        
-        //Purchases.default.initialize()
     }
     
     public func showWallpaper(id: Int = 0) {
@@ -45,7 +42,7 @@ class MainController: UIViewController {
             
             startLoadAnimation()
             
-            Backend.wallpaper(id: id, category_id: Storage.getCategorySwitchedIds(), limit: 1, complete: { status, result in
+            Backend.wallpaper(id: id, categoryId: Storage.getCategorySwitchedIds(), tag: Storage.getTag().id, complete: { status, result in
 
                 if(status) {
                     
@@ -73,6 +70,9 @@ class MainController: UIViewController {
                             
                             self.imageBackground.image = image
                             self.stopLoadAnimation()
+                            
+                            //Следим за популярностью категорий
+                            Backend.categoryIncClaim(id: Storage.getCategorySwitchedIds())
                 
                             if(id == 0) {
                                 
@@ -90,9 +90,9 @@ class MainController: UIViewController {
                     
                     self.stopLoadAnimation()
                     
-                    let alert = UIAlertController(title:  NSLocalizedString("Server error", comment: ""),
-                                                  message:  NSLocalizedString("Download error", comment: ""), preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: NSLocalizedString( NSLocalizedString("Close", comment: ""), comment: ""), style: .cancel))
+                    let alert = UIAlertController(title: "Server error".localized(),
+                                                  message: "Download error".localized(), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Close".localized(), style: .cancel))
                     self.present(alert, animated: true)
                 }
             })
@@ -127,6 +127,10 @@ class MainController: UIViewController {
         }
         if segue.destination is CategoryController {
             let vc = segue.destination as? CategoryController
+            vc?.delegate = self
+        }
+        if segue.destination is SearchController {
+            let vc = segue.destination as? SearchController
             vc?.delegate = self
         }
     }
@@ -197,28 +201,23 @@ class MainController: UIViewController {
             showWallpaper()
         }
     }
-    
 }
 
 extension MainController {
     
     @IBAction func handleSavePhoto(_ sender: Any) {
-        UIImageWriteToSavedPhotosAlbum(imageBackground.image!,
-                                       self,
-                                       #selector(savingImageCallback(_:didFinishSavingWithError:contextInfo:)),
-                                       nil)
+        UIImageWriteToSavedPhotosAlbum(imageBackground.image!, self, #selector(savingImageCallback(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @objc func savingImageCallback(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
-            let ac = UIAlertController(title: NSLocalizedString("Save error", comment: ""), message: error.localizedDescription, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: .default))
+            let ac = UIAlertController(title: "Save error".localized(), message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Close".localized(), style: .default))
             present(ac, animated: true)
         } else {
-            let ac = UIAlertController(title: NSLocalizedString("Picture is saved!", comment: ""),
-                                       message: "", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default))
+            let ac = UIAlertController(title: "Picture is saved!".localized(), message: "", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok".localized(), style: .default))
             present(ac, animated: true)
             
             Backend.incDownload(id: self.wallpaper.id)

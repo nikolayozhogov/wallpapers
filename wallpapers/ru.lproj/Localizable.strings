@@ -13,3 +13,5 @@
 "Close" = "Закрыть";
 "Picture is saved!" = "Изображение сохранено";
 "Ok" = "Хорошо";
+"Источник данного изображения неизвестен" = "The Author of this picture is unknown";
+"Источник изображения" = "Author of this picture";

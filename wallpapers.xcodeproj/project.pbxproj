@@ -14,11 +14,11 @@
 		9510770227BFA6440041D0FC /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510770127BFA6440041D0FC /* Tag.swift */; };
 		9510770527BFAD750041D0FC /* LabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510770327BFAD750041D0FC /* LabelViewCell.swift */; };
 		9510770627BFAD750041D0FC /* LabelViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9510770427BFAD750041D0FC /* LabelViewCell.xib */; };
-		951319D027B7F2F80062FDAA /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 951319CF27B7F2F80062FDAA /* Configuration.storekit */; };
 		951319D227B7FF360062FDAA /* FavoriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951319D127B7FF360062FDAA /* FavoriteController.swift */; };
 		952314EB27AC40810040AB8A /* MainViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952314EA27AC40810040AB8A /* MainViewControllerDelegate.swift */; };
 		952314EE27AC43510040AB8A /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952314EC27AC43510040AB8A /* TagViewCell.swift */; };
 		952314EF27AC43510040AB8A /* TagViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952314ED27AC43510040AB8A /* TagViewCell.xib */; };
+		954588CE27CA7BF100525BA6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954588CD27CA7BF100525BA6 /* String.swift */; };
 		954A4CB3276F2FE6002F1AEF /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A4CB1276F2FE6002F1AEF /* CategoryViewCell.swift */; };
 		954A4CB4276F2FE6002F1AEF /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954A4CB2276F2FE6002F1AEF /* CategoryViewCell.xib */; };
 		954A4CB6276F5B30002F1AEF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A4CB5276F5B30002F1AEF /* Storage.swift */; };
@@ -28,7 +28,6 @@
 		956B29B52765FD220044484B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B29B42765FD220044484B /* MainController.swift */; };
 		956B29B7276603A10044484B /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B29B6276603A10044484B /* CategoryController.swift */; };
 		958E1C26278B5E3600C1C077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 958E1C28278B5E3600C1C077 /* InfoPlist.strings */; };
-		958F8A9127AD911B009D71BA /* Purchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F8A9027AD911B009D71BA /* Purchases.swift */; };
 		95A936482779D84B00E98EF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A9364A2779D84B00E98EF6 /* Localizable.strings */; };
 		95B2F6ED2765CE8000660F49 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2F6EC2765CE8000660F49 /* UIColor.swift */; };
 		95B2F6F02765CEA000660F49 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2F6EF2765CEA000660F49 /* Image.swift */; };
@@ -73,11 +72,12 @@
 		9510770127BFA6440041D0FC /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		9510770327BFAD750041D0FC /* LabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewCell.swift; sourceTree = "<group>"; };
 		9510770427BFAD750041D0FC /* LabelViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelViewCell.xib; sourceTree = "<group>"; };
-		951319CF27B7F2F80062FDAA /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		951319D127B7FF360062FDAA /* FavoriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteController.swift; sourceTree = "<group>"; };
 		952314EA27AC40810040AB8A /* MainViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerDelegate.swift; sourceTree = "<group>"; };
 		952314EC27AC43510040AB8A /* TagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
 		952314ED27AC43510040AB8A /* TagViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagViewCell.xib; sourceTree = "<group>"; };
+		954588CD27CA7BF100525BA6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		954588CF27CA8CD700525BA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		954A4CB1276F2FE6002F1AEF /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		954A4CB2276F2FE6002F1AEF /* CategoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewCell.xib; sourceTree = "<group>"; };
 		954A4CB5276F5B30002F1AEF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -88,7 +88,6 @@
 		956B29B6276603A10044484B /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		958E1C27278B5E3600C1C077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		958E1C29278B5E3700C1C077 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		958F8A9027AD911B009D71BA /* Purchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchases.swift; sourceTree = "<group>"; };
 		95A936442779D80100E98EF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95A936452779D80100E98EF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95A936492779D84B00E98EF6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -201,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				95B2F6EC2765CE8000660F49 /* UIColor.swift */,
+				954588CD27CA7BF100525BA6 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -212,7 +212,6 @@
 				954A4CB5276F5B30002F1AEF /* Storage.swift */,
 				95B2F6F12765CEB100660F49 /* Backend.swift */,
 				9501024A27ABB10100531FC1 /* Config.swift */,
-				958F8A9027AD911B009D71BA /* Purchases.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -258,7 +257,6 @@
 				95EB8F0227625A06000AEC68 /* wallpapers.xcdatamodeld */,
 				95A9364A2779D84B00E98EF6 /* Localizable.strings */,
 				958E1C28278B5E3600C1C077 /* InfoPlist.strings */,
-				951319CF27B7F2F80062FDAA /* Configuration.storekit */,
 			);
 			path = wallpapers;
 			sourceTree = "<group>";
@@ -412,7 +410,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				95A936482779D84B00E98EF6 /* Localizable.strings in Resources */,
-				951319D027B7F2F80062FDAA /* Configuration.storekit in Resources */,
 				958E1C26278B5E3600C1C077 /* InfoPlist.strings in Resources */,
 				9510770627BFAD750041D0FC /* LabelViewCell.xib in Resources */,
 				95EB8F0927625A07000AEC68 /* LaunchScreen.storyboard in Resources */,
@@ -556,10 +553,10 @@
 				952314EB27AC40810040AB8A /* MainViewControllerDelegate.swift in Sources */,
 				956B29B7276603A10044484B /* CategoryController.swift in Sources */,
 				956B29B02765FB580044484B /* Wallpaper.swift in Sources */,
-				958F8A9127AD911B009D71BA /* Purchases.swift in Sources */,
 				95EB8EFA27625A06000AEC68 /* AppDelegate.swift in Sources */,
 				954A4CB6276F5B30002F1AEF /* Storage.swift in Sources */,
 				956B29B52765FD220044484B /* MainController.swift in Sources */,
+				954588CE27CA7BF100525BA6 /* String.swift in Sources */,
 				95EB8F0427625A06000AEC68 /* wallpapers.xcdatamodeld in Sources */,
 				956B29B22765FB600044484B /* Category.swift in Sources */,
 				95ED5E6727B91D4A00DA00F3 /* Settings.swift in Sources */,
@@ -627,6 +624,7 @@
 			children = (
 				95A936442779D80100E98EF6 /* ru */,
 				95FDB61627A14C30001CAC65 /* Base */,
+				954588CF27CA8CD700525BA6 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

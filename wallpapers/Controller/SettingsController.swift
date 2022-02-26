@@ -20,36 +20,18 @@ class SettingsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        /*Purchases.default.initialize {
-            [weak self] result in
-            guard let self = self else {
-                return
-            }
-            self.hideSpinner()
-            switch result {
-                case let .success(products):
-                DispatchQueue.main.async {
-                    self.updateInterface(products: products)
-                }
-                default:
-                break
-            }
-        }*/
+        setUI()
     }
     
-    private func updateInterface(products: [SKProduct]) {
-        print("updateInterface")
-    }
-    
-    @IBAction func btnPurchaseClick(_ sender: Any) {
-        print("click")
+    private func setUI() {
         
-        Purchases.default.buy()
     }
     
     @IBAction func btnSourceClick(_ sender: Any) {
         
-        if let link = URL(string: wallpaper.source_url) {  UIApplication.shared.open(link)}
+        if let link = URL(string: wallpaper.source_url) {
+            UIApplication.shared.open(link)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,12 +39,12 @@ class SettingsController: UIViewController {
         
         if(wallpaper.source_url.isEmpty) {
             
-            labelSource.text = "Источник данного изображения неизвестен"
+            labelSource.text = "The Author of this picture is unknown".localized()
             btnSource.isHidden = true
         } else {
             
             btnSource.isHidden = false
-            labelSource.text = "Источник изображения"
+            labelSource.text = "Author of this picture".localized()
         }
     }
 }

@@ -12,18 +12,17 @@ public class Backend {
     
     static let url = Config.apiUrl
     
-    static var wallpapers:Wallpaper = Wallpaper()
-    
     public static func incDownload(id: Int) {
         
         let url = Backend.url + "item.inc_download"
         print("id = \(id)")
         let parameters: Parameters = [
-            "id": id
+            "id": id,
+            "access_key": Config.accessKey
         ]
         
         AF.request(url,
-                   method: .get,
+                   method: .post,
                    parameters: parameters
                    ).responseJSON { responseJSON in
             
@@ -47,11 +46,12 @@ public class Backend {
         }
         
         let parameters: Parameters = [
+            "access_key": Config.accessKey,
             "id": parts.joined(separator: ",")
         ]
         
         AF.request(url,
-                   method: .get,
+                   method: .post,
                    parameters: parameters
                    ).responseJSON { responseJSON in
             
@@ -69,12 +69,13 @@ public class Backend {
         let url = Backend.url + "tag.search"
         
         let parameters: Parameters = [
+            "access_key": Config.accessKey,
             "q": q,
             "lang": Config.getCurrentLanguageCode(),
         ]
         
         AF.request(url,
-            method: .get,
+            method: .post,
             parameters: parameters
         ).responseJSON { responseJSON in
             
@@ -88,7 +89,7 @@ public class Backend {
                 items.forEach { (item) in
                     
                     tags.insert(Tag(
-                        id: (item["id"] as! NSString).integerValue,
+                        id: item["id"] as! Int,
                         name: item["name"] as! String,
                         name_en: item["name_en"] as! String
                     ), at: tags.count)
@@ -106,7 +107,14 @@ public class Backend {
         
         let url = Backend.url + "category.list"
         
-        AF.request(url).responseJSON { responseJSON in
+        let parameters: Parameters = [
+            "access_key": Config.accessKey,
+        ]
+        
+        AF.request(url,
+            method: .post,
+            parameters: parameters
+        ).responseJSON { responseJSON in
             
             switch responseJSON.result {
             case .success(let value):
@@ -133,23 +141,26 @@ public class Backend {
         }
     }
     
-    public static func wallpaper(id: Int, category_id: [Int], limit: Int, complete: @escaping (_ status: Bool, _ result: Wallpaper) -> Void) {
+    public static func wallpaper(id: Int, categoryId: [Int], tag: Int, complete: @escaping (_ status: Bool, _ result: Wallpaper) -> Void) {
         
         let url = Backend.url + "item.list"
         
         var category_ids: [String] = []
-        for element in category_id {
+        for element in categoryId {
             category_ids.append(String(element))
         }
         
         let parameters: Parameters = [
+            "access_key": Config.accessKey,
             "id": id,
-            "limit": limit,
-            "category_id": category_ids.joined(separator: ",")
+            "category_id": category_ids.joined(separator: ","),
+            "tag_id": tag
         ]
         
+        var wallpaper = Wallpaper()
+        
         AF.request(url,
-            method: .get,
+            method: .post,
             parameters: parameters
         ).responseJSON { responseJSON in
             
@@ -160,19 +171,18 @@ public class Backend {
                 
                 items.forEach { (item) in
                     
-                    self.wallpapers = Wallpaper(
+                    wallpaper = Wallpaper(
                         id: (item["id"] as! NSString).integerValue,
                         url: item["url"] as! String,
                         source_url: item["source_url"] as! String
-                        //source_url: ""
                     )
                 }
                 
-                complete(true, self.wallpapers)
+                complete(true, wallpaper)
                 
             case .failure(let error):
                 print(error)
-                complete(false, self.wallpapers)
+                complete(false, wallpaper)
             }
         }
     }

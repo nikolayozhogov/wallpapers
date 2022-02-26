@@ -12,6 +12,7 @@ class SearchController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var inputSearch: UITextField!
     
+    weak var delegate: MainViewControllerDelegate?
     private var tags: [Tag] = []
     
     private var cellWidth: Int = 0
@@ -22,6 +23,8 @@ class SearchController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        setUI()
     }
     
     private func setUI() {
@@ -40,23 +43,20 @@ class SearchController: UIViewController {
     
     @IBAction func searchEditing(_ sender: Any) {
         
-        var q = inputSearch.text ?? ""
-        /*
-        let cond = ProductCond(section_id: self.section.id, for_index: 0, sklad: 0)
-        BackendProduct.getList(cond: cond) { products in
+        let q = inputSearch.text ?? ""
+
+        Backend.tagSearch(q: q) { tags in
         
             //print(products)
-            self.products = products
+            self.tags = tags
             
             //Страница на стадии заполнения
-            if(self.products.isEmpty) {
-                self.productCellWidth = Int(self.productCollectionView.frame.size.width)
-                self.products.insert(Product(), at: 0)
+            if(self.tags.isEmpty) {
+                self.tags.insert(Tag(), at: 0)
             }
             
-            self.productCollectionView.reloadData()
+            self.collectionView.reloadData()
         }
-         */
     }
     
 }
@@ -68,12 +68,8 @@ extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        /*
-        let storyboard = UIStoryboard(name: Config.storyboardName, bundle: nil)
-        guard let vc = storyboard.instantiateViewController(identifier: ProductController.identifier) as? ProductController else { return }
-        vc.product = self.products[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
-         */
+        
+        Storage.setTag(tag: tags[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -92,7 +88,7 @@ extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: cellWidth, height: cellHeight)
-        }
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
     
 }

@@ -14,7 +14,10 @@ class Config {
     
     static var contentEmpty: String = "Ничего не найдено"
     
-    static var searchCellHeight: Int = 50
+    static var searchCellHeight: Int = 30
+    
+    //access key read only granted
+    static var accessKey: String = "e5271715-fc77-458f-b960-9b3e3af35256"
     
     static func getCurrentLanguageCode() -> String {
         let langStr = Locale.current.languageCode ?? "en"

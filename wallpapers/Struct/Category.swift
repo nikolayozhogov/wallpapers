@@ -13,10 +13,4 @@ public struct Category {
     var name: String
     var name_en: String
     var is_on: Bool
-    
-    /*init(thumb: String, full: String) {
-                
-        self.thumb = thumb
-        self.full = full
-    }*/
 }
