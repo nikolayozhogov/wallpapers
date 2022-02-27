@@ -70,6 +70,10 @@ extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         Storage.setTag(tag: tags[indexPath.row])
+        
+        delegate?.claimShowWallpaper()
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

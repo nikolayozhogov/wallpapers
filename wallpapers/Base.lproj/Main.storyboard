@@ -47,12 +47,12 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Atx-rB-HFi"/>
-                                    <barButtonItem title="search" image="magnifyingglass" catalog="system" id="cpf-xx-c9z">
+                                    <barButtonItem title="Search" image="magnifyingglass" catalog="system" id="cpf-xx-c9z">
                                         <connections>
                                             <action selector="handleSearchClick:" destination="BYZ-38-t0r" id="lf9-gx-NFQ"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="settings" image="gear" catalog="system" id="kCz-rJ-khU">
+                                    <barButtonItem title="Settings" image="gear" catalog="system" id="kCz-rJ-khU">
                                         <connections>
                                             <action selector="handleSettingsClick:" destination="BYZ-38-t0r" id="7nM-Pa-VhI"/>
                                         </connections>
@@ -93,7 +93,7 @@
         <!--Favorite Controller-->
         <scene sceneID="ek6-Oj-FCS">
             <objects>
-                <viewController id="bxX-4j-k8k" customClass="FavoriteController" customModule="wallpapers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteController" id="bxX-4j-k8k" customClass="FavoriteController" customModule="wallpapers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yjY-SP-mJm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,12 +159,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYx-PY-ccT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1007.2463768115942" y="906.69642857142856"/>
+            <point key="canvasLocation" x="-820" y="917"/>
         </scene>
         <!--Search Controller-->
         <scene sceneID="rl8-l6-MJq">
             <objects>
-                <viewController id="6lf-YH-yMg" customClass="SearchController" customModule="wallpapers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchController" id="6lf-YH-yMg" customClass="SearchController" customModule="wallpapers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XvK-di-gL1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,16 +232,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fmo-Mw-oFt">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторство" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmy-5Z-teN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmy-5Z-teN">
                                         <rect key="frame" x="10" y="10" width="394" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6K-os-5n6">
-                                        <rect key="frame" x="321.5" y="37" width="82.5" height="31"/>
+                                        <rect key="frame" x="348.5" y="37" width="55.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Перейти">
+                                        <buttonConfiguration key="configuration" style="gray" title="View">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -276,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOJ-VK-X55" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="906.69642857142856"/>
+            <point key="canvasLocation" x="1413" y="917"/>
         </scene>
     </scenes>
     <resources>
